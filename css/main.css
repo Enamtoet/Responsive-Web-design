@@ -601,6 +601,111 @@ right: -30px;
     line-height: 1.7
 }
 /* End testimonials */
+/* Start Team Members */
+.team{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.team .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.team .container .box{
+    position: relative;
+}
+.team .container .box::before, .team .container .box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #F6f6f6;
+    height: 100%;
+    border-radius: 10px;
+    transition: var(--main-transition);
+
+}
+.team .container .box::before{
+    z-index: -2;
+    width: calc(100% - 60px);
+
+}
+@media(max-width:767px){
+    .team .container .box::before{
+        width: 100%;
+    }
+}
+.team .container .box::after{
+    content:"";
+    z-index: -1;
+    width: 0;
+    background-color: #E4E4E4;
+
+}
+.team .container .box:hover::after{
+    width: calc(100% - 60px);
+}
+.team .box .data{
+    padding-top: 60px;
+    display: flex;
+    align-items: center
+}
+.team .box .data img{
+    width: calc(100% - 60px);
+    border-radius: 10px;
+}
+@media(max-width:767px){
+    .team .box .data img{
+        padding-left: 60px
+    }
+}
+.team .box:hover .data img{
+    filter: grayscale(100%);
+}
+.team .box .social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    gap: 20px;
+}
+.team .box .social a{
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+
+}
+.team .box .social i{
+    color: #777;
+}
+.team .box .social a:hover i{
+    color: var(--main-color);
+}
+.team .box .info{
+    padding-left: 80px;
+}
+@media(max-width: 767px){
+    .team .box .info{
+        padding: 0 80px;
+        text-align: center;
+    }
+}
+.team .box .info h3{
+    color: var(--main-color);
+    margin-bottom: 0;
+    font-size: 20px;
+    transition: var(--main-transition);
+}
+.team .box:hover .info h3{
+    color: #777;
+}
+.team .box .info p{
+    margin-bottom: 25px;
+}
+/* End Team Members */
 /* Start Animation */
 @keyframes up-and-down {
     0%,100%{
