@@ -9,7 +9,8 @@
     --main-color-alt: #1787E0;
     --main-transition: 0.3s;
     --main-padding:100px;
-    --section-background-color: #ECECEC
+    --section-background-color: #ECECEC;
+    --main-paragraph-color: #777
 }
 html{
     scroll-behavior: smooth;
@@ -196,7 +197,7 @@ right: -30px;
     font-size: 23px;
     line-height: 1.7;
     margin: 5px 0 0;
-    color: #777;
+    color: var(--main-paragraph-color);
     max-width: 500px;
 }
 @media (max-width: 767px){
@@ -364,7 +365,7 @@ right: -30px;
 }
 .articles .container .box .content p{
     line-height: 1.7;
-    color: #777;
+    color: var(--main-paragraph-color);
     margin: 10px 0 0
 }
 .articles .container .box .info{
@@ -491,7 +492,7 @@ right: -30px;
 .features .container .box p{
     line-height: 2;
     font-size: 20px;
-    color: #777;
+    color: var(--main-paragraph-color);
     margin: 30px auto;
     padding: 20px;
 }
@@ -588,7 +589,7 @@ right: -30px;
     margin: 0 0 10px;
 }
 .testimonials .box span{
-    color: #777;
+    color: var(--main-paragraph-color);
     display: block;
     margin-bottom: 12px;
 }
@@ -596,7 +597,7 @@ right: -30px;
     color: #ffc107;
 }
 .testimonials .box p{
-    color: #777;
+    color: var(--main-paragraph-color);
     margin-top: 10px;
     line-height: 1.7
 }
@@ -679,7 +680,7 @@ right: -30px;
 
 }
 .team .box .social i{
-    color: #777;
+    color: var(--main-paragraph-color);
 }
 .team .box .social a:hover i{
     color: var(--main-color);
@@ -700,7 +701,7 @@ right: -30px;
     transition: var(--main-transition);
 }
 .team .box:hover .info h3{
-    color: #777;
+    color: var(--main-paragraph-color);
 }
 .team .box .info p{
     margin-bottom: 25px;
@@ -914,7 +915,7 @@ right: -30px;
 }
 .work .container .box .text p{
     line-height: 1.9;
-    color: #777;
+    color: var(--main-paragraph-color);
     font-size: 18px;
     margin: 10px auto 0;
 }
@@ -985,7 +986,7 @@ right: -30px;
 .events .container .info p{
     line-height: 1.9;
     font-size: 19px;
-    color: #777;
+    color: var(--main-paragraph-color);
 }
 .events .subscribe{
     width: 100%;
