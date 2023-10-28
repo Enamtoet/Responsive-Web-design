@@ -836,6 +836,25 @@ right: -30px;
 
 
 /* End Skills */
+/* Start work */
+.work{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--section-background-color);
+}
+.work .container{
+    align-items: center;
+    display: flex
+}
+.work .container .box{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 20px;}
+.work .container .box img{
+    width: 64px;
+}
+/* End work */
 /* Start Animation */
 @keyframes up-and-down {
     0%,100%{
