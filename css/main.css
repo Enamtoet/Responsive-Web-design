@@ -909,15 +909,14 @@ right: -30px;
 
 
 .work .container .box .text h3{
-    font-size: 25px;
+    font-size: 22px;
     margin: 0;
 }
 .work .container .box .text p{
     line-height: 1.9;
     color: #777;
-    font-size: 20px;
-    margin-bottom: 0;
-
+    font-size: 18px;
+    margin: 10px auto 0;
 }
 /* End work */
 /* Start Animation */
