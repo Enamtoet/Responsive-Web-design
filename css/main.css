@@ -1067,9 +1067,60 @@ right: -30px;
     box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
     position: relative;
     transition: var(--main-transition);
+    z-index:1
+}
+.pricing .box::before,
+.pricing .box::after{
+    content: "";
+    position: absolute;
+    width:0;
+    height: 50%;
+    background-color:#F6F6F6;
+    z-index: -1;
+    transition: var(--main-transition)
+}
+.pricing .box::before{
+    top: 0;
+    left: 0
+}
+.pricing .box::after{
+    bottom: 0;
+    right: 0
+}
+@media (min-width:1200px) {
+    .pricing .box.popular{
+        top: -20px;
+    }
+    
+}
+.pricing .box.popular .label{
+    background-color: var(--main-color);
+    width: fit-content;
+    padding: 10px 10px 50px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pricing .box.popular .label::before{
+    content: "";
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+    border-width: 22px;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+}
+.pricing .box:hover::before,
+.pricing .box:hover::after{
+    width: 100%;
 }
 .pricing .box h3{
-    font-size: 25px
+    font-size: 25px;
+    letter-spacing: -1px;
 }
 .pricing .box img{
     width: 80px;
@@ -1092,6 +1143,13 @@ right: -30px;
     border-top: 1px solid #E6E6E6;
     text-align: left
 }
+.pricing .box ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f14a";
+    margin-right: 20px;
+    font-size: 20px;
+    color: var(--main-color);
+}
 .pricing .box a{
     padding: 15px 20px;
     display: block;
@@ -1100,7 +1158,12 @@ right: -30px;
     margin: 30px auto 40px;
     border-radius: 6px;
     color: var(--main-color);
-    font-weight: bold
+    font-weight: bold;
+    transition: var(--main-transition);
+}
+.pricing .box a:hover{
+    background-color: var(--main-color);
+    color: white;
 }
 /* End Pricing */
 /* Start Animation */
