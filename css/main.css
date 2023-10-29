@@ -1048,6 +1048,61 @@ right: -30px;
     background-color: var(--main-color-alt);
 }
 /* End Events */
+/* Start Pricing */
+.pricing{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--section-background-color);
+}
+.pricing .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.pricing .box{
+    background-color: white;
+    text-align: center;
+    -webkit-box-shadow:0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    -moz-box-shadow:0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    position: relative;
+    transition: var(--main-transition);
+}
+.pricing .box h3{
+    font-size: 25px
+}
+.pricing .box img{
+    width: 80px;
+    margin-bottom: 30px
+}
+.pricing .box .price span{
+    display: block
+}
+.pricing .box .price span.amount{
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--main-color)
+}
+.pricing .box .price span.time{
+    color: var(--main-paragraph-color);
+    margin-bottom: 15px
+}
+.pricing .box ul li{
+    padding: 20px;
+    border-top: 1px solid #E6E6E6;
+    text-align: left
+}
+.pricing .box a{
+    padding: 15px 20px;
+    display: block;
+    border: 2px Solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto 40px;
+    border-radius: 6px;
+    color: var(--main-color);
+    font-weight: bold
+}
+/* End Pricing */
 /* Start Animation */
 @keyframes up-and-down {
     0%,100%{
