@@ -1274,19 +1274,19 @@ right: -30px;
 .stats .box::after{
     content: "";
     position: absolute;
-    width: 2px;
+    width: 2.2px;
     height: 0%;
     background-color: var(--main-color);
-    transition: var(--main-transition);
+    transition: calc(var(--main-transition) + 0.7s);
 }
 .stats .box::before{
     top: 0;
-    left:-0.4px;
+    left:-3px;
     
 }
 .stats .box::after{
     bottom: 0;
-    right:-0.4px
+    right:0
 }
 .stats .box:hover::before,
 .stats .box:hover::after{
