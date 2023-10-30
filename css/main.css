@@ -1317,7 +1317,7 @@ right: -30px;
 }
 
 .discount  .image{
-    background-image: url(../images/discount-background1.jpg);
+    background-image: url("../images/discount-background1.jpg");
     background-size: cover;
     position: relative;
     padding: 30px 60px;
@@ -1327,6 +1327,7 @@ right: -30px;
     justify-content: center;
     align-items: center;
     z-index: 1;
+    animation: change-background 10s linear infinite;
 }
 @media (max-width:991px){
     .discount  .image{
@@ -1357,6 +1358,10 @@ right: -30px;
     width: 300px;
     max-width: 100%
 }
+.discount .content{
+    text-align: center;
+    padding: 0 20px;
+}
 .discount .form{
     display: flex;
     justify-content: center;
@@ -1381,6 +1386,9 @@ right: -30px;
     resize: none;
     height: 200px;
 }
+.discount .form .input:focus{
+    outline: none;
+}
 .discount .form a{
     background-color: var(--main-color);
     width: 100%;
@@ -1388,11 +1396,11 @@ right: -30px;
     padding: 20px;
     color: white;
     font-size: 20px;
-    font-weight: bold
+    font-weight: bold;
+    transition: var(--main-transition);
 }
-.discount .content{
-    text-align: center;
-    padding: 0 20px;
+.discount .form a:hover{
+    background-color: var(--main-color-alt);
 }
 /* End Discount */
 /* Start Animation */
@@ -1453,6 +1461,15 @@ right: -30px;
         width: 200%;
         height: 200%;
     }
+}
+@keyframes change-background {
+    0%, 100%{
+        background-image: url("../images/discount-background1.jpg");
+    }
+    50%{
+        background-image: url("../images/discount-background2.jpg");
+    }
+    
 }
 /* End Animation */
 
