@@ -1237,6 +1237,77 @@ right: -30px;
     margin-top: 10px;
 }
 /* End Video */
+/* Start Stats */
+.stats{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../images/stats.jpg);
+    position: relative;
+}
+.stats::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 96%);
+}
+.stats h2{
+    font-size: 40px;
+    margin: 0 auto 40px;
+    width: fit-content;
+    position: relative;
+}
+.stats .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.stats .box {
+    background-color: white;
+    padding: 30px 15px;
+    text-align: center;
+    position: relative
+}
+.stats .box::before,
+.stats .box::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0%;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+.stats .box::before{
+    top: 0;
+    left:-0.4px;
+    
+}
+.stats .box::after{
+    bottom: 0;
+    right:-0.4px
+}
+.stats .box:hover::before,
+.stats .box:hover::after{
+    height: 100%;
+}
+.stats .box i{
+    font-size: 40px;
+    margin-bottom: 15px
+}
+.stats .box .number{
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 15px
+}
+.stats .box span:last-child{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color)
+}
+/* End Stats */
 /* Start Animation */
 @keyframes up-and-down {
     0%,100%{
