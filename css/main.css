@@ -1327,7 +1327,11 @@ right: -30px;
     justify-content: center;
     align-items: center;
     z-index: 1;
-
+}
+@media (max-width:991px){
+    .discount  .image{
+        flex-basis: 100%;
+    }
 }
 .discount  .image::before{
     content: "";
@@ -1358,6 +1362,11 @@ right: -30px;
     justify-content: center;
     align-items: center;
     flex-basis: 50%;
+}
+@media (max-width:991px){
+    .discount .form{
+        flex-basis: 100%;
+    }
 }
 .discount .form .input{
     display: block;
