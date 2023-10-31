@@ -1327,7 +1327,7 @@ right: -30px;
     justify-content: center;
     align-items: center;
     z-index: 1;
-    animation: change-background 10s linear infinite;
+    animation: change-background 15s linear infinite;
 }
 @media (max-width:991px){
     .discount  .image{
@@ -1449,8 +1449,7 @@ right: -30px;
 @keyframes moving-arrow {
     100%{
         transform: translateX(10px);
-    }
-    
+    }    
 }
 @keyframes flashing {
     0%, 40%{
@@ -1468,8 +1467,7 @@ right: -30px;
     }
     50%{
         background-image: url("../images/discount-background2.jpg");
-    }
-    
+    } 
 }
 /* End Animation */
 
