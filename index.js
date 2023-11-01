@@ -1,10 +1,17 @@
  /* Start CountDown */
- let currentYear = new Date().getFullYear();
- let countDown = new Date(`Jan 1 , ${currentYear + 1} 00:00:00`).getTime();
+ let currentDate = new Date();
+
+ // Calculate the date for one day ahead
+ let oneDayAhead = new Date(currentDate);
+ oneDayAhead.setDate(oneDayAhead.getDate() + 2);
+
+ // Get the timestamp for one day ahead
+ let countDown = oneDayAhead.getTime();
 
 let count = setInterval(() =>{
 
     let timeNow = new Date().getTime()
+    
 
     let diffTime = countDown - timeNow
 
@@ -48,7 +55,7 @@ let section = document.querySelector(".our-skills");
             span.style.width = span.dataset.width
         }
     })
-    
+
      /* Stats Animation */
     if (window.scrollY >= stats.offsetTop - 300)
     {
