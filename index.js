@@ -29,21 +29,27 @@ let count = setInterval(() =>{
 },1000)
 
 /* Start CountDown */
+
 /* Skills Animation */
 let section = document.querySelector(".our-skills");
  let allElements = document.querySelectorAll(".skills span");
+
+/* Stats Animation */
+
  let stats = document.querySelector(".stats");
  let spans = document.querySelectorAll(".box .number");
  let started = false
 
  window.onscroll = function (){
+
+    /* Skills Animation */
     allElements.forEach((span)=>{
         if(window.scrollY >= section.offsetTop - 200){
             span.style.width = span.dataset.width
         }
     })
+    
      /* Stats Animation */
-
     if (window.scrollY >= stats.offsetTop - 300)
     {
         if(!started){
