@@ -1,6 +1,6 @@
  /* Start CountDown */
-
- countDown = new Date("Nov 30 , 2023 12:50:59").getTime()
+ let currentYear = new Date().getFullYear();
+ let countDown = new Date(`Jan 1 , ${currentYear + 1} 00:00:00`).getTime();
 
 let count = setInterval(() =>{
 
@@ -18,8 +18,8 @@ let count = setInterval(() =>{
 
 
     document.getElementById("days").innerHTML = days < 10 ? `0${days}` : days
-    document.getElementById("hours").innerHTML = hours
-    document.getElementById("minutes").innerHTML = minutes
+    document.getElementById("hours").innerHTML = hours < 10 ? `0${hours}` : hours
+    document.getElementById("minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes
     document.getElementById("seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds
 
     if (diffTime < 0) {
