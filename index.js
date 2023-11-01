@@ -29,6 +29,19 @@ let count = setInterval(() =>{
 },1000)
 
 /* Start CountDown */
+/* Skills Animation */
+let section = document.querySelector(".our-skills");
+ let allElements = document.querySelectorAll(".skills span");
+
+ window.onscroll = function (){
+    allElements.forEach((span)=>{
+        if(window.scrollY >= section.offsetTop - 200){
+            span.style.width = span.dataset.width
+        }
+    })
+
+ }
+/* End Animation */
 
 
 

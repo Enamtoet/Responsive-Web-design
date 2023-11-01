@@ -833,6 +833,7 @@ right: -30px;
     left: 0;
     height: 100%;
     background-color: var(--main-color);
+    transition: 3s
 }
 
 
@@ -970,6 +971,7 @@ right: -30px;
     font-size: 35px;
     color: var(--main-color);
     padding: 15px;
+    font-weight: bold;
 
 }
 .events .container .info .time span:last-child{
