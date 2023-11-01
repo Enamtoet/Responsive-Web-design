@@ -955,6 +955,7 @@ right: -30px;
     border-radius: 6px;
     margin-right: 15px;
     transition: var(--main-transition);
+    min-width: 75px;
 
 }
 .events .container .info .time .unit:hover,
@@ -1171,7 +1172,6 @@ right: -30px;
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
 }
-.video .container{}
 .video .container .holder{
     display: flex;
     justify-content: center
