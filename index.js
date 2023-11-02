@@ -78,13 +78,19 @@ function startCount(el){
 };
 
 let el = document.querySelector(".scroll");
-let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-window.addEventListener("scroll", ()=>{
-    let scrollTop = document.documentElement.scrollTop
-    el.style.width = `${(scrollTop / height) * 100}%`
-})
-
+window.addEventListener("scroll", () => {
+    let scrollTop = document.documentElement.scrollTop;
+    let windowHeight = window.innerHeight;
+    let documentHeight = document.documentElement.scrollHeight;
+    let height = documentHeight - windowHeight;
+    let scrollPercentage = (scrollTop / height) * 100;
+    
+    // Make sure the percentage doesn't exceed 100%.
+    scrollPercentage = Math.min(100, scrollPercentage);
+    
+    el.style.width = `${scrollPercentage}%`;
+});
 
 
 
