@@ -93,7 +93,7 @@ right: -30px;
 }
 /* End Global Rules */
 .scroll{
-    height: 4px;
+    height: 3px;
     width: 0;
     background-color: var(--main-color-alt);
     position: fixed;
@@ -1222,14 +1222,9 @@ right: -30px;
     top: 0;
     left: 0;
 }
-/* .video .holder ul li:hover{
+.video .holder ul li:hover{
     color: var(--main-color);
     background-color: #F9F9F9;
-} */
-.selected{
-color: white;
-font-weight: bold;
-background-color: var(--main-color-alt)
 }
 .video .holder ul li span{
     display: block;
