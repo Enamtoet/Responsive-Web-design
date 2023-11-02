@@ -3,7 +3,7 @@
 
  // Calculate the date for one day ahead
  let oneDayAhead = new Date(currentDate);
- oneDayAhead.setDate(oneDayAhead.getDate() + 30);
+ oneDayAhead.setDate(oneDayAhead.getDate() + 1);
 
  // Get the timestamp for one day ahead
  let countDown = oneDayAhead.getTime();
@@ -78,20 +78,70 @@ function startCount(el){
 };
 
 let el = document.querySelector(".scroll");
+let height = document.documentElement.scrollHeight- window.innerHeight
 
-window.addEventListener("scroll", () => {
-    let scrollTop = document.documentElement.scrollTop;
-    let windowHeight = window.innerHeight;
-    let documentHeight = document.documentElement.scrollHeight;
-    let height = documentHeight - windowHeight;
-    let scrollPercentage = (scrollTop / height) * 100;
-    
-    // Make sure the percentage doesn't exceed 100%.
-    scrollPercentage = Math.min(100, scrollPercentage);
-    
-    el.style.width = `${scrollPercentage}%`;
+window.addEventListener("scroll", ()=>{
+    let scrollTop = document.documentElement.scrollTop
+    el.style.width = `${(scrollTop / height) * 100}%`
+})
+
+
+const videoList = [
+    {
+        srcImg: "./images/avatar-01.png"
+    },
+    {
+        srcImg: "./images/avatar-02.png"
+    },
+    {
+        srcImg: "./images/avatar-03.png"
+    },
+    {
+        srcImg: "./images/avatar-04.png"
+    },
+    {
+        srcImg: "./images/avatar-05.png"
+    }
+];
+
+function changeImage(){
+  
+
+}
+let doc = document.querySelectorAll(".video-list li");
+let imagesList = document.querySelector(".preview");
+let images =  imagesList.querySelectorAll("img")
+// Hide all images initially
+images.forEach((img,i) => {
+    if(i==0) {img.style.display= "block"; return}
+    img.style.display = "none";
 });
 
+
+doc.forEach((child, index) => {
+   
+    child.addEventListener("click", () => {
+        // Hide all images
+        images.forEach(img => {
+            img.style.display = "none";
+        });
+    //   child.classList.remove("selected");
+    doc.forEach(listItem => {
+        listItem.classList.remove("selected");
+    });
+        // Display the image associated with the clicked list item
+        images[index].style.display = "block";
+        child.classList.add("selected");
+       
+
+    });
+
+});
+
+// doc.forEach((child)=>{
+//      child.classList.add("selected")
+
+// })
 
 
 
