@@ -92,6 +92,14 @@ right: -30px;
     transition-delay: 0.5s;
 }
 /* End Global Rules */
+.scroll{
+    height: 4px;
+    width: 0;
+    background-color: var(--main-color-alt);
+    position: fixed;
+    z-index: 1000
+
+}
 /* Start Header */
 .header{
     background-color: white;

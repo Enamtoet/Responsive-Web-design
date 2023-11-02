@@ -3,7 +3,7 @@
 
  // Calculate the date for one day ahead
  let oneDayAhead = new Date(currentDate);
- oneDayAhead.setDate(oneDayAhead.getDate() + 2);
+ oneDayAhead.setDate(oneDayAhead.getDate() + 30);
 
  // Get the timestamp for one day ahead
  let countDown = oneDayAhead.getTime();
@@ -76,6 +76,14 @@ function startCount(el){
     },500 /goal)
     
 };
+
+let el = document.querySelector(".scroll");
+let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+window.addEventListener("scroll", ()=>{
+    let scrollTop = document.documentElement.scrollTop
+    el.style.width = `${(scrollTop / height) * 100}%`
+})
 
 
 
